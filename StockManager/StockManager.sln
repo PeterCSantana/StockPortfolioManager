@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{C751FD0A-735D-48FD-8360-9B3AA18D6FFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{D9D0D92E-E103-491B-AC72-C0418F85D22D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Doman", "3 - Doman", "{A26037CC-38F0-4F6F-A68B-A5C66FC2E573}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{0195B04B-8CE4-4331-A13F-BFD2A4DF1329}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{CDB45163-EBC3-4A4B-B60D-20EE56F95B13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{45735F0F-C40A-4152-AB69-7E6F2D42549C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManager.Data.CrossCutting", "StockManager.Data.CrossCutting\StockManager.Data.CrossCutting.csproj", "{91321440-7FFA-45D6-84AE-0583B556B8F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManager.Data.Repository", "StockManager.Data.Repository\StockManager.Data.Repository.csproj", "{18EECA5E-3848-42F4-9C0A-D63CBE62C23B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManager.Data.Context", "StockManager.Data.Context\StockManager.Data.Context.csproj", "{7EDDF48F-9891-4447-A624-932398FF8371}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManager.Domain", "StockManager.Domain\StockManager.Domain.csproj", "{89B2BACE-C3EF-4694-A376-E3E4A3BA8FD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManager.Application", "StockManager.Application\StockManager.Application.csproj", "{C9C6785E-9813-4CDD-82C3-7C2A84621859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManager.Form", "StockManager.Form\StockManager.Form.csproj", "{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91321440-7FFA-45D6-84AE-0583B556B8F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91321440-7FFA-45D6-84AE-0583B556B8F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91321440-7FFA-45D6-84AE-0583B556B8F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91321440-7FFA-45D6-84AE-0583B556B8F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18EECA5E-3848-42F4-9C0A-D63CBE62C23B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18EECA5E-3848-42F4-9C0A-D63CBE62C23B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18EECA5E-3848-42F4-9C0A-D63CBE62C23B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18EECA5E-3848-42F4-9C0A-D63CBE62C23B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EDDF48F-9891-4447-A624-932398FF8371}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EDDF48F-9891-4447-A624-932398FF8371}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EDDF48F-9891-4447-A624-932398FF8371}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EDDF48F-9891-4447-A624-932398FF8371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89B2BACE-C3EF-4694-A376-E3E4A3BA8FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B2BACE-C3EF-4694-A376-E3E4A3BA8FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B2BACE-C3EF-4694-A376-E3E4A3BA8FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B2BACE-C3EF-4694-A376-E3E4A3BA8FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9C6785E-9813-4CDD-82C3-7C2A84621859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C6785E-9813-4CDD-82C3-7C2A84621859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C6785E-9813-4CDD-82C3-7C2A84621859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C6785E-9813-4CDD-82C3-7C2A84621859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CDB45163-EBC3-4A4B-B60D-20EE56F95B13} = {0195B04B-8CE4-4331-A13F-BFD2A4DF1329}
+		{45735F0F-C40A-4152-AB69-7E6F2D42549C} = {0195B04B-8CE4-4331-A13F-BFD2A4DF1329}
+		{91321440-7FFA-45D6-84AE-0583B556B8F6} = {45735F0F-C40A-4152-AB69-7E6F2D42549C}
+		{18EECA5E-3848-42F4-9C0A-D63CBE62C23B} = {CDB45163-EBC3-4A4B-B60D-20EE56F95B13}
+		{7EDDF48F-9891-4447-A624-932398FF8371} = {CDB45163-EBC3-4A4B-B60D-20EE56F95B13}
+		{89B2BACE-C3EF-4694-A376-E3E4A3BA8FD4} = {A26037CC-38F0-4F6F-A68B-A5C66FC2E573}
+		{C9C6785E-9813-4CDD-82C3-7C2A84621859} = {D9D0D92E-E103-491B-AC72-C0418F85D22D}
+		{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8} = {C751FD0A-735D-48FD-8360-9B3AA18D6FFE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18A1E63E-13B0-417D-8B98-11DCC9AD16D3}
+	EndGlobalSection
+EndGlobal
