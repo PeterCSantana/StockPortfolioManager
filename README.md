@@ -17,6 +17,9 @@ This system has as general purpose to replace the "famous" trader's spreadsheets
 
 
 ## Supported platforms
+- .Net Core
+- C#
+- DDD
 
 ## NuGet package
 
