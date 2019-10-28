@@ -15,17 +15,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{45735F0F-C40A-4152-AB69-7E6F2D42549C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManager.Data.CrossCutting", "StockManager.Data.CrossCutting\StockManager.Data.CrossCutting.csproj", "{91321440-7FFA-45D6-84AE-0583B556B8F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingManager.Data.CrossCutting", "TradingManager.Data.CrossCutting\TradingManager.Data.CrossCutting.csproj", "{91321440-7FFA-45D6-84AE-0583B556B8F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManager.Data.Repository", "StockManager.Data.Repository\StockManager.Data.Repository.csproj", "{18EECA5E-3848-42F4-9C0A-D63CBE62C23B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingManager.Data.Repository", "TradingManager.Data.Repository\TradingManager.Data.Repository.csproj", "{18EECA5E-3848-42F4-9C0A-D63CBE62C23B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManager.Data.Context", "StockManager.Data.Context\StockManager.Data.Context.csproj", "{7EDDF48F-9891-4447-A624-932398FF8371}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingManager.Data.Context", "TradingManager.Data.Context\TradingManager.Data.Context.csproj", "{7EDDF48F-9891-4447-A624-932398FF8371}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManager.Domain", "StockManager.Domain\StockManager.Domain.csproj", "{89B2BACE-C3EF-4694-A376-E3E4A3BA8FD4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingManager.Domain", "TradingManager.Domain\TradingManager.Domain.csproj", "{89B2BACE-C3EF-4694-A376-E3E4A3BA8FD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManager.Application", "StockManager.Application\StockManager.Application.csproj", "{C9C6785E-9813-4CDD-82C3-7C2A84621859}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingManager.Application", "TradingManager.Application\TradingManager.Application.csproj", "{C9C6785E-9813-4CDD-82C3-7C2A84621859}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockManager.Form", "StockManager.Form\StockManager.Form.csproj", "{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingManager.Form", "TradingManager.Form\TradingManager.Form.csproj", "{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
