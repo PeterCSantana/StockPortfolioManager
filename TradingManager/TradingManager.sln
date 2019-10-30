@@ -15,17 +15,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{45735F0F-C40A-4152-AB69-7E6F2D42549C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingManager.Data.CrossCutting", "TradingManager.Data.CrossCutting\TradingManager.Data.CrossCutting.csproj", "{91321440-7FFA-45D6-84AE-0583B556B8F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradingManager.Data.CrossCutting", "TradingManager.Data.CrossCutting\TradingManager.Data.CrossCutting.csproj", "{91321440-7FFA-45D6-84AE-0583B556B8F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingManager.Data.Repository", "TradingManager.Data.Repository\TradingManager.Data.Repository.csproj", "{18EECA5E-3848-42F4-9C0A-D63CBE62C23B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradingManager.Data.Repository", "TradingManager.Data.Repository\TradingManager.Data.Repository.csproj", "{18EECA5E-3848-42F4-9C0A-D63CBE62C23B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingManager.Data.Context", "TradingManager.Data.Context\TradingManager.Data.Context.csproj", "{7EDDF48F-9891-4447-A624-932398FF8371}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradingManager.Data.Context", "TradingManager.Data.Context\TradingManager.Data.Context.csproj", "{7EDDF48F-9891-4447-A624-932398FF8371}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingManager.Domain", "TradingManager.Domain\TradingManager.Domain.csproj", "{89B2BACE-C3EF-4694-A376-E3E4A3BA8FD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradingManager.Domain", "TradingManager.Domain\TradingManager.Domain.csproj", "{89B2BACE-C3EF-4694-A376-E3E4A3BA8FD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingManager.Application", "TradingManager.Application\TradingManager.Application.csproj", "{C9C6785E-9813-4CDD-82C3-7C2A84621859}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TradingManager.Application", "TradingManager.Application\TradingManager.Application.csproj", "{C9C6785E-9813-4CDD-82C3-7C2A84621859}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingManager.Form", "TradingManager.Form\TradingManager.Form.csproj", "{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradingManager.WPF", "TradingManager.WPF\TradingManager.WPF.csproj", "{6A5F0548-F336-4712-A560-958B3E22F5BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +53,10 @@ Global
 		{C9C6785E-9813-4CDD-82C3-7C2A84621859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9C6785E-9813-4CDD-82C3-7C2A84621859}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9C6785E-9813-4CDD-82C3-7C2A84621859}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A5F0548-F336-4712-A560-958B3E22F5BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A5F0548-F336-4712-A560-958B3E22F5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A5F0548-F336-4712-A560-958B3E22F5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A5F0548-F336-4712-A560-958B3E22F5BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,7 +69,7 @@ Global
 		{7EDDF48F-9891-4447-A624-932398FF8371} = {CDB45163-EBC3-4A4B-B60D-20EE56F95B13}
 		{89B2BACE-C3EF-4694-A376-E3E4A3BA8FD4} = {A26037CC-38F0-4F6F-A68B-A5C66FC2E573}
 		{C9C6785E-9813-4CDD-82C3-7C2A84621859} = {D9D0D92E-E103-491B-AC72-C0418F85D22D}
-		{D50C95F7-AFF2-49BE-8406-5ED536EEEFE8} = {C751FD0A-735D-48FD-8360-9B3AA18D6FFE}
+		{6A5F0548-F336-4712-A560-958B3E22F5BB} = {C751FD0A-735D-48FD-8360-9B3AA18D6FFE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {18A1E63E-13B0-417D-8B98-11DCC9AD16D3}
