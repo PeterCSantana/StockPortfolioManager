@@ -13,7 +13,7 @@ namespace TradingManager.Data.Repository
   {
     public virtual void Add(params T[] items)
     {
-      using var context = new TradingManagerContext();
+      using TradingManagerContext context = new TradingManagerContext();
       foreach (T item in items)
       {
         context.Entry(item).State = EntityState.Added;
@@ -23,7 +23,7 @@ namespace TradingManager.Data.Repository
 
     public virtual void AddNoValidate(params T[] items)
     {
-      using var context = new TradingManagerContext();
+      using TradingManagerContext context = new TradingManagerContext();
       foreach (T item in items)
       {
         context.Entry(item).State = EntityState.Added;
@@ -33,7 +33,7 @@ namespace TradingManager.Data.Repository
 
     public virtual void Delete(params T[] items)
     {
-      using var context = new TradingManagerContext();
+      using TradingManagerContext context = new TradingManagerContext();
       foreach (T item in items)
       {
         context.Entry(item).State = EntityState.Deleted;
@@ -49,7 +49,7 @@ namespace TradingManager.Data.Repository
     public virtual IList<T> GetAll(params Expression<Func<T, object>>[] navProperties)
     {
       List<T> list;
-      using (var context = new TradingManagerContext())
+      using (TradingManagerContext context = new TradingManagerContext())
       {
         IQueryable<T> dbQuery = context.Set<T>();
 
@@ -72,7 +72,7 @@ namespace TradingManager.Data.Repository
     public virtual IList<T> GetList(Func<T, bool> where, params Expression<Func<T, object>>[] navProperties)
     {
       List<T> list;
-      using (var context = new TradingManagerContext())
+      using (TradingManagerContext context = new TradingManagerContext())
       {
         IQueryable<T> dbQuery = context.Set<T>();
 
@@ -87,28 +87,10 @@ namespace TradingManager.Data.Repository
       return list;
     }
 
-    public virtual IList<T> GetList(Func<T, bool> where, out int TotalPages, int pageIndex = 0, int pageSize = 20, params Expression<Func<T, object>>[] navProperties)
-    {
-      List<T> list;
-      using (var context = new TradingManagerContext())
-      {
-        IQueryable<T> dbQuery = context.Set<T>();
-
-        //Apply eager loading
-        foreach (Expression<Func<T, object>> navigationProperty in navProperties)
-          dbQuery = dbQuery.Include<T, object>(navigationProperty);
-
-        dbQuery = dbQuery.AsNoTracking().Where(where).AsQueryable<T>().Paged<T>(pageIndex, pageSize, out TotalPages);
-
-        list = dbQuery.ToList<T>();
-      }
-      return list;
-    }
-
     public virtual T GetSingle(Func<T, bool> where, params Expression<Func<T, object>>[] navProperties)
     {
       T item = null;
-      using (var context = new TradingManagerContext())
+      using (TradingManagerContext context = new TradingManagerContext())
       {
         IQueryable<T> dbQuery = context.Set<T>();
 
@@ -125,7 +107,7 @@ namespace TradingManager.Data.Repository
 
     public virtual void Update(params T[] items)
     {
-      using var context = new TradingManagerContext();
+      using TradingManagerContext context = new TradingManagerContext();
       foreach (T item in items)
       {
         context.Entry(item).State = EntityState.Modified;
@@ -135,7 +117,7 @@ namespace TradingManager.Data.Repository
 
     public virtual void UpdateNoValidate(params T[] items)
     {
-      using var context = new TradingManagerContext();
+      using TradingManagerContext context = new TradingManagerContext();
       foreach (T item in items)
       {
         context.Entry(item).State = EntityState.Modified;
