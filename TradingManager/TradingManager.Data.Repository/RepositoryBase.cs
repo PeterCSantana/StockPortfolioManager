@@ -87,6 +87,11 @@ namespace TradingManager.Data.Repository
       return list;
     }
 
+    public IList<T> GetList(Func<T, bool> where, out int TotalPages, int pageIndex = 0, int pageSize = 20, params Expression<Func<T, object>>[] navProperties)
+    {
+      throw new NotImplementedException();
+    }
+
     public virtual T GetSingle(Func<T, bool> where, params Expression<Func<T, object>>[] navProperties)
     {
       T item = null;
