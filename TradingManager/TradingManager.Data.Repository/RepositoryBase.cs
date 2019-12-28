@@ -89,7 +89,21 @@ namespace TradingManager.Data.Repository
 
     public IList<T> GetList(Func<T, bool> where, out int TotalPages, int pageIndex = 0, int pageSize = 20, params Expression<Func<T, object>>[] navProperties)
     {
-      throw new NotImplementedException();
+      List<T> list;
+      using (TradingManagerContext context = new TradingManagerContext())
+      {
+        IQueryable<T> dbQuery = context.Set<T>();
+
+        foreach (Expression<Func<T, object>> navigationProperty in navProperties)
+        {
+          dbQuery = dbQuery.Include<T, object>(navigationProperty);
+        }
+
+        dbQuery = dbQuery.AsNoTracking().Where(where).AsQueryable<T>().Paged<T>(pageIndex, pageSize, out TotalPages);
+
+        list = dbQuery.ToList<T>();
+      }
+      return list;
     }
 
     public virtual T GetSingle(Func<T, bool> where, params Expression<Func<T, object>>[] navProperties)
