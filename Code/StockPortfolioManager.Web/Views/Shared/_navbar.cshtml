@@ -1,0 +1,47 @@
+﻿@{
+  var pageName = ViewContext.RouteData.Values["controller"].ToString();
+}
+
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      @* Logo da pagina *@
+      <a href="/" class="brand-logo">
+        <img src="~/Content/Img/Logo.svg" />
+        <span class="valign">
+          <b class="main-text">Stock Portfolio Manager - </b> @ViewBag.Title
+        </span>
+      </a>
+
+      @* Itens Pais do menu *@
+      <ul class="hide-on-med-and-down right">
+        <li class="@(pageName == "Home" ? "active" : "")">
+          <a href="/">Visão Geral</a>
+        </li>
+
+        <li class="@(pageName == "Lançamentos" ? "active" : "")">
+          <a class="dropdown-button dropdown-trigger" data-target="dropdown-lancamento">
+            Lançamentos
+            <i class="fa fa-sort-desc dropdown-icon right" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <li class="@(pageName == "Relatórios" ? "active" : "")">
+          <a class="dropdown-button dropdown-trigger" data-target="dropdown-relatorio" data-hover="true">
+            Relatórios
+            <i class="fa fa-sort-desc dropdown-icon right" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+
+      @* Itens Filhos *@
+      <ul id="dropdown-lancamento" class="dropdown-content">
+        <li class="@(pageName == "ImportarNota" ? "active" : "" )"><a href="~/ImportarNota">Importar Nota de Corretagem</a></li>
+      </ul>
+      <ul id="dropdown-relatorio" class="dropdown-content">
+        <li class="@(pageName == "teste1" ? "active" : "")"><a href="~/Sala">Teste 1</a></li>
+        <li class="@(pageName == "teste2" ? "active" : "")"><a href="~/TipoMatricula">teste 2</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>

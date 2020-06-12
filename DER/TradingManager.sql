@@ -8,22 +8,22 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema TradingManager
+-- Schema StockPortfolioManager
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `TradingManager` ;
+DROP SCHEMA IF EXISTS `StockPortfolioManager` ;
 
 -- -----------------------------------------------------
--- Schema TradingManager
+-- Schema StockPortfolioManager
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `TradingManager` DEFAULT CHARACTER SET utf8 ;
-USE `TradingManager` ;
+CREATE SCHEMA IF NOT EXISTS `StockPortfolioManager` DEFAULT CHARACTER SET utf8 ;
+USE `StockPortfolioManager` ;
 
 -- -----------------------------------------------------
--- Table `TradingManager`.`NotaCorretagem`
+-- Table `StockPortfolioManager`.`NotaCorretagem`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `TradingManager`.`NotaCorretagem` ;
+DROP TABLE IF EXISTS `StockPortfolioManager`.`NotaCorretagem` ;
 
-CREATE TABLE IF NOT EXISTS `TradingManager`.`NotaCorretagem` (
+CREATE TABLE IF NOT EXISTS `StockPortfolioManager`.`NotaCorretagem` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Numero` INT NOT NULL,
   `Dt_Pregrao` DATETIME NOT NULL,
@@ -39,11 +39,11 @@ COMMENT = '					';
 
 
 -- -----------------------------------------------------
--- Table `TradingManager`.`TaxaBMF`
+-- Table `StockPortfolioManager`.`TaxaBMF`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `TradingManager`.`TaxaBMF` ;
+DROP TABLE IF EXISTS `StockPortfolioManager`.`TaxaBMF` ;
 
-CREATE TABLE IF NOT EXISTS `TradingManager`.`TaxaBMF` (
+CREATE TABLE IF NOT EXISTS `StockPortfolioManager`.`TaxaBMF` (
   `NotaCorretagem_Id` INT NOT NULL,
   `Vlr_Liquido` DECIMAL(15,2) NOT NULL,
   `IRRF_Day_Trade` DECIMAL(3,2) NOT NULL,
@@ -54,18 +54,18 @@ CREATE TABLE IF NOT EXISTS `TradingManager`.`TaxaBMF` (
   PRIMARY KEY (`NotaCorretagem_Id`),
   CONSTRAINT `fk_TaxaBMF_NotaCorretagem`
     FOREIGN KEY (`NotaCorretagem_Id`)
-    REFERENCES `TradingManager`.`NotaCorretagem` (`Id`)
+    REFERENCES `StockPortfolioManager`.`NotaCorretagem` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `TradingManager`.`FinanceiroBovespa`
+-- Table `StockPortfolioManager`.`FinanceiroBovespa`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `TradingManager`.`FinanceiroBovespa` ;
+DROP TABLE IF EXISTS `StockPortfolioManager`.`FinanceiroBovespa` ;
 
-CREATE TABLE IF NOT EXISTS `TradingManager`.`FinanceiroBovespa` (
+CREATE TABLE IF NOT EXISTS `StockPortfolioManager`.`FinanceiroBovespa` (
   `NotaCorretagem_Id` INT NOT NULL,
   `Vlr_Liquido_Operacao` DECIMAL(15,2) NOT NULL,
   `Tx_Liquidacao` DECIMAL(5,2) NOT NULL,
@@ -81,18 +81,18 @@ CREATE TABLE IF NOT EXISTS `TradingManager`.`FinanceiroBovespa` (
   PRIMARY KEY (`NotaCorretagem_Id`),
   CONSTRAINT `fk_FinanceiroBovespa_NotaCorretagem1`
     FOREIGN KEY (`NotaCorretagem_Id`)
-    REFERENCES `TradingManager`.`NotaCorretagem` (`Id`)
+    REFERENCES `StockPortfolioManager`.`NotaCorretagem` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `TradingManager`.`Ordem`
+-- Table `StockPortfolioManager`.`Ordem`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `TradingManager`.`Ordem` ;
+DROP TABLE IF EXISTS `StockPortfolioManager`.`Ordem` ;
 
-CREATE TABLE IF NOT EXISTS `TradingManager`.`Ordem` (
+CREATE TABLE IF NOT EXISTS `StockPortfolioManager`.`Ordem` (
   `NotaCorretagem_Id` INT NOT NULL,
   `Mercadoria_Titulo` VARCHAR(10) NOT NULL,
   `TipoOrdem` CHAR(1) NOT NULL COMMENT 'C = Compra\nV = Venda',
@@ -104,18 +104,18 @@ CREATE TABLE IF NOT EXISTS `TradingManager`.`Ordem` (
   PRIMARY KEY (`NotaCorretagem_Id`),
   CONSTRAINT `fk_table1_NotaCorretagem1`
     FOREIGN KEY (`NotaCorretagem_Id`)
-    REFERENCES `TradingManager`.`NotaCorretagem` (`Id`)
+    REFERENCES `StockPortfolioManager`.`NotaCorretagem` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `TradingManager`.`NegocioBovespa`
+-- Table `StockPortfolioManager`.`NegocioBovespa`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `TradingManager`.`NegocioBovespa` ;
+DROP TABLE IF EXISTS `StockPortfolioManager`.`NegocioBovespa` ;
 
-CREATE TABLE IF NOT EXISTS `TradingManager`.`NegocioBovespa` (
+CREATE TABLE IF NOT EXISTS `StockPortfolioManager`.`NegocioBovespa` (
   `NotaCorretagem_Id` INT NOT NULL,
   `Debentures` DECIMAL(5,2) NOT NULL,
   `MV_TotCompra` DECIMAL(15,2) NOT NULL,
@@ -129,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `TradingManager`.`NegocioBovespa` (
   PRIMARY KEY (`NotaCorretagem_Id`),
   CONSTRAINT `fk_NegocioBovespa_NotaCorretagem1`
     FOREIGN KEY (`NotaCorretagem_Id`)
-    REFERENCES `TradingManager`.`NotaCorretagem` (`Id`)
+    REFERENCES `StockPortfolioManager`.`NotaCorretagem` (`Id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

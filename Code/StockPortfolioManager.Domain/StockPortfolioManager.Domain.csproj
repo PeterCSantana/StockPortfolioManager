@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7443E3BC-E1ED-4B3A-9369-9C65AEA6025E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockPortfolioManager.Domain</RootNamespace>
+    <AssemblyName>StockPortfolioManager.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\FinanceiroBovespa.cs" />
+    <Compile Include="Entities\NegocioBovespa.cs" />
+    <Compile Include="Entities\NotaCorretagem.cs" />
+    <Compile Include="Entities\Ordem.cs" />
+    <Compile Include="Entities\TaxaBMF.cs" />
+    <Compile Include="Interface\Repository\IFinanceiroBovespaRepository.cs" />
+    <Compile Include="Interface\Repository\INegocioBovespaRepository.cs" />
+    <Compile Include="Interface\Repository\INotaCorretagemRepository.cs" />
+    <Compile Include="Interface\Repository\IOrdemRepository.cs" />
+    <Compile Include="Interface\Repository\IRepositoryBase.cs" />
+    <Compile Include="Interface\Repository\ITaxaBMFRepository.cs" />
+    <Compile Include="Interface\Service\IFinanceiroBovespaService.cs" />
+    <Compile Include="Interface\Service\INegocioBovespaService.cs" />
+    <Compile Include="Interface\Service\INotaCorretagemService.cs" />
+    <Compile Include="Interface\Service\IOrdemService.cs" />
+    <Compile Include="Interface\Service\IServiceBase.cs" />
+    <Compile Include="Interface\Service\ITaxaBMFService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\FinanceiroBovespaService.cs" />
+    <Compile Include="Service\NegocioBovespaService.cs" />
+    <Compile Include="Service\NotaCorretagemService.cs" />
+    <Compile Include="Service\OrdemService.cs" />
+    <Compile Include="Service\ServiceBase.cs" />
+    <Compile Include="Service\TaxaBMFService.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
