@@ -7,20 +7,25 @@ This system has as general purpose to replace the "famous" trader's spreadsheets
 - Index and Mini Index / Dollar and Mini Dollar buy and sell list with detailed fees charged;
 - Add Income stock;
 - Add contributions and withdrawals;
-- Minimum and maximum projection setting;
+- Stop Loss and Take Profit to test 3 per 1 rule;
 - Calculation for tithing;
 - Add purchased service fees;
 - Performance Report:
   - Monthly and yearly monitoring;
   - Stock monitoring;
   - BM&F monitoring;
-
-
+  
 ## Supported platforms
-- .Net Core
+- .Net Framework 
 - C#
 - DDD
+- MySql
 
 ## NuGet package
+- Simple Injector
+- FontAwesome
+- EntityFramework
+- JQuery
+- MySql
 
 ## Sample usage
